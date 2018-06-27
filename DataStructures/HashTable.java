@@ -6,6 +6,7 @@
 //				called "HashEntry<K, V>
 //				HashEntry is used for putting things
 //				into out HashTable Data Structure.
+package DataStructures;
 import java.util.TreeSet;
 import java.util.Set;
 
