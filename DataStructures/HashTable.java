@@ -15,7 +15,7 @@ public class HashTable <K, V>
 {
 	//HashTable instance variables
 	private int INITAL_SIZE = 16;
-	//This will server as our inner data structure.
+	//This will serve as our inner data structure.
 	private HashEntry[] entries = new HashEntry[INITAL_SIZE];
 
 
@@ -35,7 +35,6 @@ public class HashTable <K, V>
 			entries[hashValue] = hashEntry;
 		else
 		{
-			//come back here to type check.
 			HashEntry<K, V> temp = entries[hashValue];
 			while (temp.next != null)
 				temp = temp.next;
@@ -81,8 +80,8 @@ public class HashTable <K, V>
 	public String toString()
 	{
 		String str = "{\n";
-		for (K key : this.keySet())
-			str += "[" + key + " : " +  this.get(key) + "]\n";	
+		for (K key : keySet())
+			str += "[" + key + " : " +  get(key) + "]\n";	
 		return str + "}";
 	}
 
@@ -132,7 +131,7 @@ public class HashTable <K, V>
 		{
 			this.key = key;
 			this.value = value;
-			this.next = null;
+			next = null;
 		}
 	}
 }
